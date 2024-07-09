@@ -18,7 +18,7 @@ makefile.coq:
 
 
 doc: makefile.coq demo
-	mkdir docs
+	mkdir -p docs
 	rm -fr html docs/*
 	COQDOCEXTRAFLAGS='--external $(PUBLIC_URL)'
 	@$(MAKE) -f makefile.coq html
